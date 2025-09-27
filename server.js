@@ -189,6 +189,9 @@ async function fetchSportData(compactDate, includeDetails, useCache = true) {
   return { leagues: leaguesWithLogos };
 }
 
+app.get('/', (req, res) => {
+    res.json({ "hell0": "world" })
+})
 // --- Routes ---
 app.get("/sport/scheduled-events", async (req, res) => {
   const date = req.query.date;
